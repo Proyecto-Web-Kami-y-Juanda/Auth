@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="WebRepository" />
         <module name="usuario" />
+        <module name="Auth" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Auth" options="-parameters" />
       <module name="WebRepository" options="-parameters" />
       <module name="usuario" options="-parameters" />
     </option>

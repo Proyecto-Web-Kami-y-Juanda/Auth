@@ -21,6 +21,7 @@ public class AuthApplication {
 
 		@Override
 		protected void configure(HttpSecurity http) throws Exception {
+			System.out.println("Esto es una prueba");
 			http.csrf().disable()
 					.addFilterAfter(new AuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
 					.authorizeRequests()
