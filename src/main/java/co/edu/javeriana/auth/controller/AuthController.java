@@ -1,10 +1,7 @@
 package co.edu.javeriana.auth.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import co.edu.javeriana.auth.dto.User;
 import co.edu.javeriana.auth.service.AuthService;
@@ -16,6 +13,7 @@ public class AuthController {
     private AuthService authService;
 
     @PostMapping("login")
+    @CrossOrigin
     public User login(@RequestParam String user, @RequestParam String password) {
         return authService.login(user, password);
     }
