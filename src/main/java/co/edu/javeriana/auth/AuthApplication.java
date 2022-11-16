@@ -21,7 +21,7 @@ public class AuthApplication {
 
 		@Override
 		protected void configure(HttpSecurity http) throws Exception {
-			http.csrf().disable()
+			http.cors().and().csrf().disable()
 					.addFilterAfter(new AuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
 					.authorizeRequests()
 					.antMatchers(HttpMethod.POST, "/login").permitAll()

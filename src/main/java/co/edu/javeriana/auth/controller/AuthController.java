@@ -7,6 +7,7 @@ import co.edu.javeriana.auth.dto.User;
 import co.edu.javeriana.auth.service.AuthService;
 
 @RestController
+@CrossOrigin
 public class AuthController {
 
     @Autowired
